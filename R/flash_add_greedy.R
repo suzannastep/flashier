@@ -21,7 +21,7 @@
 #'   \code{\link{init.fn.irlba}} have been supplied
 #'   (\code{\link{init.fn.softImpute}} can yield better results than the
 #'   default initialization function when there is missing data). Custom
-#'   initialization functions may also be used. It is espeically important to
+#'   initialization functions may also be used. It is especially important to
 #'   use an appropriate initialization function when factors or loadings must be
 #'   constrained in some fashion --- otherwise, the greedy algorithm can stop
 #'   adding factor/loadings pairs too early. Custom initialization functions
@@ -55,11 +55,11 @@
 #'   \code{\link{conv.crit.loadings}}, and \code{\link{conv.crit.factors}}.
 #'   Custom functions may also be used. They should accept three parameters,
 #'   \code{new}, \code{old}, and \code{k}, where \code{new} refers to the
-#'   \code{\link{flash.fit}} object from the current iteration and \code{old}
-#'   refers to the \code{\link{flash.fit}} object from the previous iteration.
-#'   Custom functions can safely ignore parameter \code{k}, which is
-#'   included for uniformity with custom "verbose" display functions (see
-#'   \code{\link{flash.set.verbose}}).
+#'   \code{\link{flash.fit}} object from the current iteration, \code{old}
+#'   refers to the \code{\link{flash.fit}} object from the previous iteration,
+#'   and \code{k} identifies the factor/loadings pair that is currently
+#'   being updated during sequential backfits (that is, in calls to function
+#'   \code{\link{flash.backfit}} where \code{extrapolate = FALSE}).
 #'
 #' @param tol The convergence tolerance (see parameter \code{conv.crit.fn}
 #'   above).
